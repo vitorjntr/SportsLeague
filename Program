@@ -1,0 +1,61 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.Equipes;
+import entities.Player;
+
+public class Program {
+/* codigo hoje começou conflitos, não consigo montar uma classe pro menu então esta todas informacoes
+na class program.
+Outra situação é que os breaks não estão funcionando 
+*/
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Player player1 = new Player();
+		Equipes equipe1 = new Equipes();
+	
+
+		System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||");
+		System.out.println("Bem vindo a liga");
+		
+		System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||");
+		System.out.println("O que voce deseja fazer?");
+		System.out.println("A) Cria uma equipe");
+		System.out.println("B) Cria um jogador");
+		System.out.println("C) Ver caracteristicas do jogador?");
+		
+		String options = null;
+		options = sc.nextLine();
+		do {
+	switch (options) {
+			case "C":
+				System.out.println("O nome do jogador eh " + player1.name
+						+ ", o pe que ele chuta eh o " + player1.foot
+						+ ", a posicao eh " + player1.posicion 
+						+ " e o numero dele eh " + player1.number + ".");
+				break;
+			case "B":
+				System.out.println("Digite o nome do jogador");
+				player1.name = sc.nextLine();
+				System.out.println("Digite o pe do jogador");
+				player1.foot = sc.nextLine();
+				System.out.println("Digite a posicao do jogador");
+				player1.posicion = sc.nextLine();
+				System.out.println("Digite o numero do jogador");
+				player1.number = sc.nextInt();
+				break;
+			case "A":		
+				System.out.println("Digite o nome da equipe");
+				equipe1.name = sc.nextLine();
+				System.out.println(equipe1);
+				break;
+			}	
+		} while(!options.equals("Q")); //Sair do programa
+		
+
+		
+		sc.close();
+	
+		}
+}
