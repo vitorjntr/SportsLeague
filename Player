@@ -1,0 +1,9 @@
+package entities;
+
+	public class Player {
+		public String name;
+		public String foot;
+		public String posicion;
+		public int number;
+	
+}
